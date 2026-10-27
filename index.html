@@ -208,9 +208,12 @@
           </svg>
         </button>
         <button onclick="navigateTo('inicio')" class="text-left focus:outline-none group">
-          <span class="text-xs font-semibold tracking-wide uppercase text-muted-custom block">UTMACH •
-            Fundamentos</span>
-          <span class="text-sm sm:text-base font-bold tracking-tight group-hover:underline">Mi Espacio de Estudio</span>
+          <span class="text-xs font-semibold tracking-wide uppercase text-muted-custom block">UTMACH • Fundamentos de
+            Programación</span>
+          <span class="text-sm sm:text-base font-bold tracking-tight group-hover:underline flex items-center gap-1">
+            <span>Tu Espacio de Estudio</span>
+            <span class="text-xs">✨</span>
+          </span>
         </button>
       </div>
 
@@ -219,13 +222,13 @@
         <button onclick="navigateTo('inicio')" data-nav="inicio"
           class="nav-link px-3.5 py-2 rounded-xl text-sm font-medium transition">Inicio</button>
         <button onclick="navigateTo('aprender')" data-nav="aprender"
-          class="nav-link px-3.5 py-2 rounded-xl text-sm font-medium transition">Aprender</button>
+          class="nav-link px-3.5 py-2 rounded-xl text-sm font-medium transition">Aprender 📖</button>
         <button onclick="navigateTo('practicar')" data-nav="practicar"
-          class="nav-link px-3.5 py-2 rounded-xl text-sm font-medium transition">Practicar</button>
+          class="nav-link px-3.5 py-2 rounded-xl text-sm font-medium transition">Practicar ✍️</button>
         <button onclick="navigateTo('apuntes')" data-nav="apuntes"
-          class="nav-link px-3.5 py-2 rounded-xl text-sm font-medium transition">Mis apuntes</button>
+          class="nav-link px-3.5 py-2 rounded-xl text-sm font-medium transition">Tus apuntes 📚</button>
         <button onclick="navigateTo('espacio')" data-nav="espacio"
-          class="nav-link px-3.5 py-2 rounded-xl text-sm font-medium transition">Mi espacio</button>
+          class="nav-link px-3.5 py-2 rounded-xl text-sm font-medium transition">Tu espacio 🌸</button>
       </nav>
 
       <!-- Controles: Modo tranquilo y Música -->
@@ -234,7 +237,7 @@
           class="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-medium surface-subtle hover:opacity-85 transition flex items-center gap-1.5"
           title="Modo sin distracciones">
           <span>🌿</span>
-          <span id="calmModeBtnText">Modo tranquilo</span>
+          <span id="calmModeBtnText">Modo tranqui 🌿</span>
         </button>
         <button onclick="toggleMusicDrawer()"
           class="p-2 rounded-xl surface-subtle hover:opacity-85 transition text-xs font-medium flex items-center gap-1.5"
@@ -285,51 +288,76 @@
     <!-- 1. PÁGINA DE INICIO                                                    -->
     <!-- ====================================================================== -->
     <section id="view-inicio" class="space-y-8">
-      <div class="surface-card rounded-2xl p-6 sm:p-8 space-y-4">
-        <p class="text-xs font-semibold uppercase tracking-wider text-muted-custom">Bienvenido a tu mesa de estudio</p>
-        <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">Tómate tu tiempo. Hoy puedes aprender algo nuevo.</h1>
-        <p class="text-muted-custom text-sm sm:text-base max-w-2xl">
-          Elige una sola cosa en la que concentrarte ahora mismo. Puedes leer un concepto paso a paso, practicar un
-          ejercicio con calma o repasar tus apuntes de Fundamentos de Programación.
+      <div class="surface-card rounded-2xl p-6 sm:p-8 space-y-4 border shadow-sm"
+        style="border-color: var(--border-soft);">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full badge-sage">Preparado para ti •
+            Fundamentos UTMACH</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-snug">
+          ¡Tú puedessshh! Vamoshhhh paso a paso sin estrés ✨
+        </h1>
+        <p class="text-muted-custom text-sm sm:text-base max-w-2xl leading-relaxed">
+          Aquí tienes todo organizado para Fundamentos de Programación: temas explicados de clase, los 20 ejercicios y
+          tus diapositivas oficiales. Eshoo eshooo, no te rindashh
         </p>
 
-        <!-- Nota humana discreta -->
-        <div id="homeHumorBox" class="pt-3 border-t flex items-center justify-between gap-3 text-xs text-muted-custom"
+        <!-- Mensajitos de Amor y Ánimo -->
+        <div id="homeHumorBox"
+          class="pt-3.5 border-t flex flex-wrap items-center justify-between gap-3 text-xs text-muted-custom"
           style="border-color: var(--border-soft);">
-          <p class="italic">💬 <span id="humorQuoteText">"Si no funciona, revisa el código antes de culpar al
-              teclado."</span></p>
-          <button onclick="nextHumorQuote()" class="shrink-0 underline hover:opacity-80">Otra nota</button>
+          <div class="flex items-start gap-2 flex-1 min-w-[260px]">
+            <span class="text-base shrink-0"></span>
+            <p class="italic text-sm text-main-custom leading-snug">
+              <span id="humorQuoteText">"¡Tú puedessshh! Cada línea de código que aprendes es un pasito más...
+                ¡vamoshhhh!"</span>
+            </p>
+          </div>
+          <button onclick="nextHumorQuote()"
+            class="shrink-0 px-3 py-1.5 rounded-xl surface-subtle border text-xs font-semibold hover:opacity-85 transition flex items-center gap-1"
+            style="border-color: var(--border-soft);">
+            <span>✨</span>
+            <span>Otro mensajito para ti</span>
+          </button>
         </div>
       </div>
 
       <!-- Tarjeta Continuar estudiando -->
       <div id="continueStudyCard"
-        class="surface-subtle rounded-2xl p-5 flex flex-wrap items-center justify-between gap-4">
+        class="surface-subtle rounded-2xl p-5 flex flex-wrap items-center justify-between gap-4 border"
+        style="border-color: var(--border-soft);">
         <div class="space-y-1">
-          <span class="text-xs font-semibold uppercase tracking-wider text-muted-custom">Continuar donde lo
-            dejaste</span>
-          <h2 id="continueTitle" class="text-base font-bold">Semana 1: ¿Qué es un algoritmo y cómo se diseña?</h2>
-          <p id="continueSubtitle" class="text-xs text-muted-custom">Explicación paso a paso y ejemplos iniciales</p>
+          <span class="text-xs font-semibold uppercase tracking-wider text-muted-custom flex items-center gap-1.5">
+            <span>🌸</span>
+            <span>Continuar donde lo dejaste</span>
+          </span>
+          <h2 id="continueTitle" class="text-base sm:text-lg font-bold">Semana 1: ¿Qué es un algoritmo y cómo se diseña?
+          </h2>
+          <p id="continueSubtitle" class="text-xs text-muted-custom">Paso a pasito, ¡vamoshhhh que tú puedessshh!</p>
         </div>
         <button id="continueActionBtn" onclick="resumeLastActivity()"
-          class="px-4 py-2.5 rounded-xl btn-sage text-sm font-medium transition">
-          Continuar estudiando →
+          class="px-5 py-2.5 rounded-xl btn-sage text-sm font-semibold transition shadow-sm hover:opacity-90 flex items-center gap-2">
+          <span>¡Vamoshhhh a estudiar!</span>
+          <span>→</span>
         </button>
       </div>
 
       <!-- Los 4 Accesos Principales -->
       <div class="space-y-3">
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-muted-custom px-1">¿Qué te gustaría hacer hoy?
+        <h2
+          class="text-xs sm:text-sm font-bold uppercase tracking-wider text-muted-custom px-1 flex items-center gap-1.5">
+          <span>✨</span>
+          <span>¿Qué vamos a repasar hoy? ¡Vamoshhhh!</span>
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <button onclick="navigateTo('aprender')"
             class="surface-card rounded-2xl p-6 text-left hover:shadow-sm transition flex flex-col justify-between gap-4 group">
             <div class="space-y-2">
               <span class="inline-block text-xl">📖</span>
-              <h3 class="text-lg font-bold group-hover:underline">1. Aprender</h3>
-              <p class="text-sm text-muted-custom">
-                Explicaciones sencillas de las Semanas 1 a 8, con ideas cotidianas, código explicado línea por línea y
-                botón para explicarlo más fácil.
+              <h3 class="text-lg font-bold group-hover:underline">1. Aprender con calma 📖</h3>
+              <p class="text-xs sm:text-sm text-muted-custom leading-relaxed">
+                Explicaciones bonitas y facilitas de las Semanas 1 a 8, con ejemplos cotidianos y el botoncito mágico
+                para explicártelo aún más fácil si algo se complica. ¡Tú puedessshh!
               </p>
             </div>
             <span class="text-xs font-semibold" style="color: var(--accent-sage);">Ir a los temas de clase →</span>
@@ -339,39 +367,42 @@
             class="surface-card rounded-2xl p-6 text-left hover:shadow-sm transition flex flex-col justify-between gap-4 group">
             <div class="space-y-2">
               <span class="inline-block text-xl">✍️</span>
-              <h3 class="text-lg font-bold group-hover:underline">2. Practicar</h3>
-              <p class="text-sm text-muted-custom">
-                Los 20 ejercicios interactivos oficiales del cuaderno práctico de la UTMACH, organizados paso a paso con
-                comprobación inmediata.
+              <h3 class="text-lg font-bold group-hover:underline">2. Practicar sin miedo ✍️</h3>
+              <p class="text-xs sm:text-sm text-muted-custom leading-relaxed">
+                Los 20 ejercicios interactivos del cuaderno de la UTMACH con comprobación al instante. ¡Eshoo eshooo, a
+                resolverlos paso a paso sin presión!
               </p>
             </div>
-            <span class="text-xs font-semibold" style="color: var(--accent-sage);">Ir a los 20 ejercicios →</span>
+            <span class="text-xs font-semibold" style="color: var(--accent-sage);">¡Vamoshhhh a los 20 ejercicios!
+              →</span>
           </button>
 
           <button onclick="navigateTo('apuntes')"
             class="surface-card rounded-2xl p-6 text-left hover:shadow-sm transition flex flex-col justify-between gap-4 group">
             <div class="space-y-2">
               <span class="inline-block text-xl">🗂️</span>
-              <h3 class="text-lg font-bold group-hover:underline">3. Mis apuntes</h3>
-              <p class="text-sm text-muted-custom">
-                Guías de clase oficiales, resúmenes en 5 puntos, formulario PSeInt vs Java y enlace directo a tu carpeta
-                en Google Drive.
+              <h3 class="text-lg font-bold group-hover:underline">3. Tus apuntes y diapositivas 📚</h3>
+              <p class="text-xs sm:text-sm text-muted-custom leading-relaxed">
+                Tus 7 clases oficiales de la Dra. Bertha Mazón, visor en vivo, resúmenes con tips de examen y formulario
+                de bolsillo PSeInt vs Java. ¡Todo listo para ti!
               </p>
             </div>
-            <span class="text-xs font-semibold" style="color: var(--accent-sage);">Consultar documentos →</span>
+            <span class="text-xs font-semibold" style="color: var(--accent-sage);">Abrir tus apuntes y diapositivas
+              →</span>
           </button>
 
           <button onclick="navigateTo('espacio')"
             class="surface-card rounded-2xl p-6 text-left hover:shadow-sm transition flex flex-col justify-between gap-4 group">
             <div class="space-y-2">
               <span class="inline-block text-xl">🎧</span>
-              <h3 class="text-lg font-bold group-hover:underline">4. Mi espacio</h3>
-              <p class="text-sm text-muted-custom">
-                Música de estudio (Spotify o Drive), temporizador de descanso sin estrés, bloc de notas personales y
-                preferencias.
+              <h3 class="text-lg font-bold group-hover:underline">4. Tu espacio de paz 🌸</h3>
+              <p class="text-xs sm:text-sm text-muted-custom leading-relaxed">
+                Tu música de Drive de 117 temas, temporizador suave sin estrés y tu bloc para anotar lo que quieras.
+                Sabeshhh mi deseoo eshh... jsjsj oñoo
               </p>
             </div>
-            <span class="text-xs font-semibold" style="color: var(--accent-sage);">Personalizar mi estudio →</span>
+            <span class="text-xs font-semibold" style="color: var(--accent-sage);">Entrar a tu espacio relajante
+              →</span>
           </button>
         </div>
       </div>
@@ -384,11 +415,12 @@
       <div class="surface-card rounded-2xl p-6 space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-muted-custom">Apartado de estudio</span>
-            <h1 class="text-xl sm:text-2xl font-bold">Explicaciones paso a paso</h1>
+            <span class="text-xs font-semibold uppercase tracking-wider text-muted-custom">🌸 Explicaciones con
+              cariño</span>
+            <h1 class="text-xl sm:text-2xl font-bold">Aprende paso a pasito a tu ritmo</h1>
           </div>
-          <span id="studiedTopicsCount" class="text-xs px-3 py-1 rounded-full badge-sage font-medium">0 temas
-            leídos</span>
+          <span id="studiedTopicsCount" class="text-xs px-3 py-1 rounded-full badge-sage font-medium">0 temitas
+            dominados ✨</span>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
@@ -577,7 +609,7 @@
                 <button id="btnValidate" onclick="ejecutarYComprobarEjercicio()"
                   class="w-full py-2.5 px-4 rounded-xl btn-sage text-sm font-medium transition flex items-center justify-center gap-2">
                   <span>🔍</span>
-                  <span>Ejecutar y Comprobar Ejercicio</span>
+                  <span>¡Comprobar mi ejercicio! (¡Vamoshhhh!)</span>
                 </button>
               </div>
 
@@ -675,15 +707,16 @@
       <div class="surface-card rounded-2xl p-6 space-y-4">
         <div class="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <span class="text-xs font-semibold uppercase tracking-wider text-muted-custom">Biblioteca y resúmenes</span>
-            <h1 class="text-xl sm:text-2xl font-bold">Mis apuntes y materiales</h1>
+            <span class="text-xs font-semibold uppercase tracking-wider text-muted-custom">🌸 Tus clases y
+              resúmenes</span>
+            <h1 class="text-xl sm:text-2xl font-bold">Tus apuntes de Fundamentos de Programación</h1>
           </div>
           <a href="https://drive.google.com/drive/folders/1KMtGz-0AuiYy3WvfCsFPb7Qbr7Nrlej_?usp=sharing" target="_blank"
             rel="noopener noreferrer"
             class="px-3.5 py-2 rounded-xl btn-sage text-xs font-semibold inline-flex items-center gap-1.5 shadow-sm hover:opacity-90 transition shrink-0"
             title="Abrir carpeta oficial de clases en Google Drive">
             <span>📚</span>
-            <span>Carpeta de Clases Drive ↗</span>
+            <span>Tu Carpeta de Clases Drive ↗</span>
           </a>
         </div>
 
@@ -759,25 +792,29 @@
     <!-- ====================================================================== -->
     <section id="view-espacio" class="hidden space-y-6">
       <div class="surface-card rounded-2xl p-6 space-y-2">
-        <span class="text-xs font-semibold uppercase tracking-wider text-muted-custom">Bienestar y organización</span>
-        <h1 class="text-xl sm:text-2xl font-bold">Mi espacio personal</h1>
-        <p class="text-sm text-muted-custom">Organiza tu sesión de estudio sin presión, guarda notas rápidas y ajusta tu
-          comodidad visual.</p>
+        <span class="text-xs font-semibold uppercase tracking-wider text-muted-custom">💖 Cuídate y respira, mi
+          niña</span>
+        <h1 class="text-xl sm:text-2xl font-bold">Tu rinconcito personal de paz</h1>
+        <p class="text-sm text-muted-custom leading-relaxed">
+          Organiza tu sesión de estudio sin presión. Sabeshhh mi deseoo eshh que estudies tranquila y sin estrés jsjsj,
+          ¡shiiiii!
+        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Temporizador -->
         <div class="surface-card rounded-2xl p-6 space-y-4">
           <div class="flex items-center justify-between">
-            <h2 class="text-base font-bold">⏱️ Temporizador tranquilo</h2>
-            <span class="text-xs badge-sage px-2.5 py-0.5 rounded-full">Sin presión</span>
+            <h2 class="text-base font-bold">⏱️ Temporizador a tu ritmo</h2>
+            <span class="text-xs badge-sage px-2.5 py-0.5 rounded-full">Sin presión, tú mandas</span>
           </div>
-          <p class="text-xs text-muted-custom">Úsalo a tu propio ritmo. Si necesitas parar antes, no hay ningún
-            problema.</p>
+          <p class="text-xs text-muted-custom">Úsalo a tu propio ritmo. Si necesitas parar antes y descansar, no hay
+            problema. ¡Tú mandas!</p>
 
           <div class="py-4 text-center surface-subtle rounded-2xl space-y-2">
             <div id="timerDisplay" class="text-4xl font-bold font-mono tracking-tight">25:00</div>
-            <p id="timerStatusMsg" class="text-xs text-muted-custom">Elige la duración y comienza cuando quieras.</p>
+            <p id="timerStatusMsg" class="text-xs text-muted-custom">Elige el tiempito y comienza cuando quieras mi
+              amor.</p>
           </div>
 
           <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
@@ -843,14 +880,15 @@
       <div class="surface-card rounded-2xl p-6 space-y-3">
         <div class="flex items-center justify-between">
           <div>
-            <h2 class="text-base font-bold">📝 Mis notas rápidas</h2>
-            <p class="text-xs text-muted-custom">Dudas para clase o apuntes rápidos. Se guarda automáticamente.</p>
+            <h2 class="text-base font-bold">📝 Tus notas y recordatorios bonitos</h2>
+            <p class="text-xs text-muted-custom">Dudas para clase o apuntes para recordar. Se guarda automáticamente.
+            </p>
           </div>
-          <span id="personalNotesSavedBadge" class="text-xs text-muted-custom">Guardado local</span>
+          <span id="personalNotesSavedBadge" class="text-xs text-muted-custom">Guardado para ti ✓</span>
         </div>
         <textarea id="personalNotesArea" oninput="savePersonalNotes(this.value)" rows="6"
           class="w-full p-4 rounded-xl surface-subtle text-sm focus:outline-none"
-          placeholder="Escribe tus apuntes aquí..."></textarea>
+          placeholder="Escribe aquí tus apuntes, dudas o recordatorios... ¡tú puedessshh!"></textarea>
       </div>
     </section>
 
@@ -862,9 +900,9 @@
   <!-- Botón flotante para restaurar/abrir el reproductor cuando esté oculto -->
   <button id="musicFloatingToggleBtn" onclick="toggleMusicDrawer(true)"
     class="fixed bottom-4 right-4 z-40 px-3.5 py-2 rounded-full shadow-lg border surface-card hover:opacity-90 hover:scale-105 transition-all text-xs font-medium flex items-center gap-2 cursor-pointer hidden"
-    title="Abrir reproductor de música de Drive">
+    title="Abrir tu reproductor de música">
     <span>🎵</span>
-    <span class="font-semibold">Música Drive</span>
+    <span class="font-semibold">Tu música ✨</span>
     <span id="floatingTrackBadge" class="text-[10px] px-1.5 py-0.5 rounded-full surface-subtle font-mono">117</span>
     <span class="text-xs">▲</span>
   </button>
@@ -879,15 +917,15 @@
         <span class="text-sm">🎵</span>
         <select id="musicSourceSelect" onchange="switchMusicSource(this.value)"
           class="px-2 py-1 rounded-lg surface-subtle font-semibold text-xs focus:outline-none cursor-pointer truncate max-w-[190px]">
-          <option value="drive" selected>📁 Drive (117 temas)</option>
+          <option value="drive" selected>📁 Tu música Drive (117 temas)</option>
           <option value="ambient">🌿 Ruido relajante</option>
           <option value="spotify">🎧 Spotify</option>
           <option value="custom">🔗 Enlace propio</option>
         </select>
         <a href="https://drive.google.com/drive/folders/1_6_TLyTP5b5FDr-_Ln7VUO3jpt-wMvc6?usp=sharing" target="_blank"
           rel="noopener noreferrer" class="text-[11px] underline text-muted-custom hover:opacity-80 hidden sm:inline"
-          title="Abrir carpeta compartida en Drive">
-          Carpeta ↗
+          title="Abrir tu carpeta compartida de música en Drive">
+          Tu carpeta ↗
         </a>
       </div>
 
@@ -1053,16 +1091,18 @@
 
   <!-- JAVASCRIPT COMPLETO Y TOTALMENTE CERRADO -->
   <script>
-    // 1. NOTAS GRACIOSAS
+    // 1. NOTAS Y MENSAJITOS DE ÁNIMO (SOLO LO PEDIDO)
     const HUMOR_QUOTES = [
-      "Si no funciona, revisa el código antes de culpar al teclado.",
-      "Un punto y coma puede arruinarte el día. Java es así de considerado.",
-      "Respira. Hasta los programadores experimentados buscan errores que ellos mismos escribieron.",
-      "Descansar cinco minutos también cuenta como mantenimiento del sistema.",
-      "Tu cerebro no es una computadora. Aunque a veces ambos necesitan reiniciarse.",
-      "Error encontrado: llevas veinte minutos estudiando y todavía no has tomado agua.",
-      "Si compiló a la primera, revisa que no hayas abierto otro proyecto.",
-      "No tienes que aprenderlo todo hoy. Ni siquiera Java lo consiguió en una tarde."
+      "¡Tú puedessshh! Cada línea de código que aprendes es un pasito más... ¡vamoshhhh!",
+      "Eshoo eshooo, no te rindashh... sabeshhh mi deseoo eshh verte pasar esa materia con 10 jsjsj, shiiiii",
+      "Sabeshhh mi deseoo eshh que no te estreses tanto jsjsj... ¡vamoshhhh que sí sale!",
+      "¡Tú puedessshh! Ni Java ni ningún algoritmo van a poder contigo, shiiiii",
+      "No te rindashh. Si no compila a la primera, respira hondo... hasta el mejor programador se equivoca. ¡Eshoo eshooo!",
+      "Eshoo eshooo... ¿ya tomaste agüita? Descansar un ratito también cuenta, shiiiii",
+      "Un punto y coma no te va a ganar jamás... ¡vamoshhhh, eshoo eshooo!",
+      "Sabeshhh mi deseoo eshh que le metas ganas sin estresarte jsjsj, ¡tú puedessshh! shiiiii",
+      "¡Tú puedessshh! Con calma y sin prisas, que vas bien... ¡vamoshhhh!",
+      "Eshoo eshooo, cada ejercicio que resuelves te hace más pro. ¡A darle con todo, shiiiii!"
     ];
     let currentQuoteIdx = 0;
 
@@ -2786,7 +2826,7 @@
 
       const isStudied = studiedTopics.has(topic.id);
       const countEl = document.getElementById("studiedTopicsCount");
-      if (countEl) countEl.textContent = `${studiedTopics.size} de ${STUDY_TOPICS.length} temas leídos`;
+      if (countEl) countEl.textContent = `${studiedTopics.size} de ${STUDY_TOPICS.length} temitas dominados ✨`;
 
       const container = document.getElementById("studyTopicContent");
       if (!container) return;
@@ -2801,13 +2841,13 @@
               ✨ Explicarlo más fácil
             </button>
             <button onclick="toggleTopicStudied('${topic.id}')" class="px-3.5 py-2 rounded-xl text-xs font-semibold transition ${isStudied ? "btn-sage" : "surface-subtle"}">
-              ${isStudied ? "✓ Tema estudiado" : "Marcar como estudiado"}
+              ${isStudied ? "✓ ¡Eshoo eshooo! (Estudiado)" : "Marcar como aprendido (¡Tú puedessshh!)"}
             </button>
           </div>
         </div>
 
         <div id="easyVersionBox" class="hidden p-4 rounded-2xl badge-sage text-sm space-y-1">
-          <p class="font-bold text-xs uppercase tracking-wider">En palabras aún más sencillas:</p>
+          <p class="font-bold text-xs uppercase tracking-wider">🌸 En palabras más facilitas y con amor:</p>
           <p>${topic.easyVersion}</p>
         </div>
 
@@ -2936,10 +2976,10 @@
 
       const statusBadge = document.getElementById("exStatusBadge");
       if (solvedExercises.has(ex.id)) {
-        statusBadge.textContent = "🟢 Ejercicio completado";
+        statusBadge.textContent = "🟢 ¡Eshoo eshooo! (Completado) ";
         statusBadge.className = "text-xs font-semibold px-3 py-1 rounded-full badge-sage";
       } else {
-        statusBadge.textContent = "A tu propio ritmo";
+        statusBadge.textContent = "¡Tú puedessshh, con calma! ";
         statusBadge.className = "text-xs text-muted-custom";
       }
 
@@ -2952,10 +2992,16 @@
       document.getElementById("refSolPseint").textContent = ex.proposed.solPseint;
       document.getElementById("refSolJava").textContent = ex.proposed.solJava;
 
-      ["acc-ejemplo", "acc-procedimiento", "acc-probar", "acc-escritorio", "acc-pseint", "acc-java", "acc-solucion"].forEach(id => {
+      // Cerrar detalles secundarios pero mantener abiertos los pasos principales para que no queden ocultos
+      ["acc-ejemplo", "acc-escritorio", "acc-pseint", "acc-java", "acc-solucion"].forEach(id => {
         const d = document.getElementById(id);
         if (d) d.open = false;
       });
+      // Abrir por defecto la zona de práctica y procedimiento para que se vean de inmediato
+      const accProbar = document.getElementById("acc-probar");
+      if (accProbar) accProbar.open = true;
+      const accProc = document.getElementById("acc-procedimiento");
+      if (accProc) accProc.open = true;
 
       const presetContainer = document.getElementById("presetButtonsContainer");
       presetContainer.innerHTML = "";
@@ -3056,9 +3102,9 @@
       box.className = "md:col-span-7 surface-subtle rounded-xl p-5 min-h-[200px] flex flex-col justify-center min-w-0 max-w-full overflow-hidden break-words";
       box.innerHTML = `
         <div class="text-center space-y-2 py-4">
-          <p class="text-sm font-semibold">Listo para comprobar tu ejercicio</p>
+          <p class="text-sm font-semibold">Listo para comprobar cuando quieras</p>
           <p class="text-xs text-muted-custom max-w-md mx-auto">
-            Ingresa tus datos a la izquierda y presiona <strong>"Ejecutar y Comprobar Ejercicio"</strong> para verificarlo paso a paso.
+            Ingresa tus datos o usa un caso oficial a la izquierda y presiona <strong>"¡Comprobar mi ejercicio!"</strong>. ¡Tú puedessshh!
           </p>
         </div>
       `;
@@ -3125,33 +3171,33 @@
         box.className = "md:col-span-7 rounded-xl p-5 space-y-4 border-2 border-emerald-600/40 bg-emerald-50/70 text-stone-800 min-w-0 max-w-full overflow-hidden break-words";
         box.innerHTML = `
           <div class="flex items-start gap-2.5">
-            <span class="text-lg">🟢</span>
+            <span class="text-2xl">🎉</span>
             <div>
-              <h4 class="text-sm font-bold text-emerald-950">¡Muy bien! El cálculo y las condiciones son correctos</h4>
-              <p class="text-xs text-emerald-900">Se ejecutó la prueba de escritorio exitosamente.</p>
+              <h4 class="text-sm sm:text-base font-bold text-emerald-950">¡ESHOO ESHOOOO! ¡Quedó perfecto! 🎉</h4>
+              <p class="text-xs text-emerald-900">¡Viste que sí puedessshh! El cálculo y las condiciones están impecables. ¡shiiiii!</p>
             </div>
           </div>
           <div class="p-3.5 rounded-xl bg-white/90 border border-emerald-200 space-y-2">
-            <p class="text-xs font-semibold text-stone-600">Salida:</p>
+            <p class="text-xs font-semibold text-stone-600">Salida de tu programa:</p>
             <p class="font-mono text-sm font-bold text-emerald-900">${result.displayOutput}</p>
-            <p class="text-xs font-semibold text-stone-600 pt-1">Paso a paso:</p>
+            <p class="text-xs font-semibold text-stone-600 pt-1">Paso a paso de la prueba de escritorio:</p>
             <ul class="text-xs font-mono text-stone-700 space-y-1">
               ${result.steps.map(s => `<li>• ${s}</li>`).join("")}
             </ul>
           </div>
         `;
       } catch (err) {
-        box.className = "md:col-span-7 rounded-xl p-5 space-y-3 border-2 border-red-400/60 bg-red-50/80 text-stone-800 min-w-0 max-w-full overflow-hidden break-words";
+        box.className = "md:col-span-7 rounded-xl p-5 space-y-3 border-2 border-amber-400/60 bg-amber-50/80 text-stone-800 min-w-0 max-w-full overflow-hidden break-words";
         box.innerHTML = `
           <div class="flex items-start gap-2.5">
-            <span class="text-lg">🔴</span>
+            <span class="text-2xl">🧸</span>
             <div>
-              <h4 class="text-sm font-bold text-red-950">Hay un detalle por revisar</h4>
-              <p class="text-xs text-red-900">${err.message}</p>
+              <h4 class="text-sm font-bold text-amber-950">¡No te rindashh, casi lo tienes!</h4>
+              <p class="text-xs text-amber-900">${err.message}</p>
             </div>
           </div>
-          <div class="p-3 rounded-xl bg-white/90 border border-red-200 text-xs text-stone-700">
-            Verifica que los datos no estén vacíos ni fuera de rango. También puedes probar con los botones de casos de prueba.
+          <div class="p-3 rounded-xl bg-white/90 border border-amber-200 text-xs text-stone-700 leading-relaxed">
+            Equivocarse es parte de aprender. Revisa con calma los números o prueba con los botones de casos de prueba. ¡Vamoshhhh que sí sale!
           </div>
         `;
       }
@@ -3159,7 +3205,7 @@
 
     function updateSolvedCounter() {
       const el = document.getElementById("solvedCounter");
-      if (el) el.textContent = `${solvedExercises.size} / ${EXERCISES.length}`;
+      if (el) el.textContent = `${solvedExercises.size} de ${EXERCISES.length} dominados 🌟`;
     }
 
     function prevExercise() {
@@ -3227,7 +3273,7 @@
       if (!doc || !viewer) return;
 
       const sv = doc.studyView;
-      const hasDrivePreview = doc.driveId && doc.driveId.length > 5;
+      const hasDrivePreview = doc.driveId && doc.driveId.length > 5 && doc.id !== "doc-pocket";
 
       viewer.innerHTML = `
         <!-- ENCABEZADO HERMOSO Y AMPLIO DE LA CLASE -->
@@ -3238,7 +3284,7 @@
             <div class="flex flex-wrap items-center gap-2">
               <span class="text-xs font-bold px-3 py-1 rounded-full badge-sage shadow-sm">${escapeHtml(doc.week)}</span>
               <span class="text-xs font-medium px-2.5 py-1 rounded-full surface-subtle text-muted-custom">${escapeHtml(doc.type)}</span>
-              ${doc.sourceType === 'OFFICIAL' ? '<span class="text-xs font-semibold px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">✓ Oficial UTMACH</span>' : ''}
+              ${doc.sourceType === 'OFFICIAL' ? '<span class="text-xs font-semibold px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">✓ Oficial UTMACH</span>' : ''}
             </div>
             <button onclick="toggleFavoriteDoc('${doc.id}')"
               class="text-xs px-3 py-1 rounded-lg surface-subtle hover:opacity-85 text-muted-custom transition flex items-center gap-1.5"
@@ -3491,7 +3537,7 @@
                         <div class="font-bold text-emerald-800 dark:text-emerald-300 flex items-start gap-2 leading-relaxed">
                           <span class="shrink-0 text-sm">✓</span>
                           <div>
-                            <span class="underline">Respuesta correcta:</span> ${escapeHtml(q.a)}
+                            <span class="underline">¡Eshoo eshooo! Respuesta correcta:</span> ${escapeHtml(q.a)}
                           </div>
                         </div>
                         ${q.explanation ? `
@@ -3517,10 +3563,13 @@
     function toggleDocPdfViewer(containerId, btn) {
       const el = document.getElementById(containerId);
       if (!el) return;
-      if (el.classList.contains("hidden")) {
+      const isHidden = el.classList.contains("hidden") || el.style.display === "none";
+      if (isHidden) {
+        el.style.display = "block";
         el.classList.remove("hidden");
         if (btn) btn.textContent = "Ocultar visor ✕";
       } else {
+        el.style.display = "none";
         el.classList.add("hidden");
         if (btn) btn.textContent = "Mostrar visor 👁";
       }
@@ -3529,13 +3578,16 @@
     function toggleQuizAnswer(answerId, btn) {
       const el = document.getElementById(answerId);
       if (!el) return;
-      if (el.classList.contains("hidden")) {
+      const isHidden = el.classList.contains("hidden") || el.style.display === "none";
+      if (isHidden) {
+        el.style.display = "block";
         el.classList.remove("hidden");
         if (btn) {
           btn.innerHTML = "<span>🙈</span><span>Ocultar Respuesta</span>";
           btn.classList.add("btn-sage");
         }
       } else {
+        el.style.display = "none";
         el.classList.add("hidden");
         if (btn) {
           btn.innerHTML = "<span>👁</span><span>Revelar Respuesta y Explicación</span>";
@@ -4160,12 +4212,24 @@
       }
 
       if (isMusicBarOpen) {
-        bar.classList.remove("translate-y-[130%]", "opacity-0", "pointer-events-none");
-        if (floatBtn) floatBtn.classList.add("hidden");
+        bar.style.display = "block";
+        bar.style.visibility = "visible";
+        bar.style.opacity = "1";
+        bar.style.transform = "translateY(0)";
+        bar.style.pointerEvents = "auto";
+        bar.classList.remove("hidden", "translate-y-[130%]", "opacity-0", "pointer-events-none");
+        if (floatBtn) {
+          floatBtn.style.display = "none";
+          floatBtn.classList.add("hidden");
+        }
         try { localStorage.setItem("utmach_music_hidden", "false"); } catch (e) { }
       } else {
-        bar.classList.add("translate-y-[130%]", "opacity-0", "pointer-events-none");
-        if (floatBtn) floatBtn.classList.remove("hidden");
+        bar.style.display = "none";
+        bar.classList.add("hidden");
+        if (floatBtn) {
+          floatBtn.style.display = "flex";
+          floatBtn.classList.remove("hidden");
+        }
         try { localStorage.setItem("utmach_music_hidden", "true"); } catch (e) { }
       }
     }
@@ -4323,7 +4387,15 @@
 
     function toggleMusicConfigPanel() {
       const panel = document.getElementById("musicConfigPanel");
-      if (panel) panel.classList.toggle("hidden");
+      if (!panel) return;
+      const isHidden = panel.classList.contains("hidden") || panel.style.display === "none";
+      if (isHidden) {
+        panel.style.display = "block";
+        panel.classList.remove("hidden");
+      } else {
+        panel.style.display = "none";
+        panel.classList.add("hidden");
+      }
     }
 
     function loadCustomCloudAudio() {
